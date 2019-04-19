@@ -59,7 +59,7 @@ xlabel('Re(\lambda_J)');
 ylabel('Im(\lambda_J)')
 hold off;
 %% Time steps
-N_tot = 100000
+
 for i=2:N_tot
 
 x(:,i)=  x(:,i-1)  +  Dt*(-x(:,i-1)/N* ( x(:,i-1)'*J*x(:,i-1)) + J*x(:,i-1)) + (eye(N)-1/N*x(:,i-1)*x(:,i-1)')*randn(N,1)*sqrt(2*Dt*T);
